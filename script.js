@@ -33,6 +33,7 @@ function updateCell(cell, index) {
     board[index] = currentPlayer;
     cell.textContent = currentPlayer;
     cell.disabled = true;
+    cell.classList.add(currentPlayer.toLowerCase());
 }
 
 function checkWinner() {
@@ -85,6 +86,7 @@ function resetGame() {
     cells.forEach(cell => {
         cell.textContent = '';
         cell.disabled = false;
+        cell.classList.remove('x', 'o');
     });
 }
 
